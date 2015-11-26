@@ -19,7 +19,6 @@
 // #import <ParseCrashReporting/ParseCrashReporting.h>
 
 #import "ParseStarterProjectAppDelegate.h"
-#import "ParseStarterProjectViewController.h"
 
 @implementation ParseStarterProjectAppDelegate
 
@@ -52,10 +51,11 @@
 
     [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
 
+    
+    [Parse setApplicationId:@"S4T1rB1lUzUeknrgqt6IkbqkxE1HWPb4obpO4vXE"
+                  clientKey:@"rCxZUYc5lPboGirtQfdTVb1UeQofKpFM6ogUbHmT"];
+    
     // Override point for customization after application launch.
-
-    self.window.rootViewController = self.viewController;
-    [self.window makeKeyAndVisible];
 
     if (application.applicationState != UIApplicationStateBackground) {
         // Track an app open here if we launch with a push, unless
