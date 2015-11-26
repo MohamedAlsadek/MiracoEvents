@@ -29,7 +29,6 @@
         if (!error) {
             // The find succeeded.
             
-            
         } else {
             // Log details of the failure
             NSLog(@"Error: %@ %@", error, [error userInfo]);
