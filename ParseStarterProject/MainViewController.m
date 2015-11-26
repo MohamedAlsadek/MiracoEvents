@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import <Parse/Parse.h>
 
 @interface MainViewController ()
 
