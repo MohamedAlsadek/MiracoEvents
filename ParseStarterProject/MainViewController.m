@@ -19,8 +19,24 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    NSLog(@"hiiii ") ; 
+    [self testParseIntegration] ;
 }
+
+
+-(void) testParseIntegration {
+    PFQuery *query = [PFQuery queryWithClassName:@"Area"];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            
+            
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+    }];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
