@@ -55,6 +55,17 @@
  }
  
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    int selectedItem = (int) indexPath.row ;
+    switch (selectedItem) {
+        case 0: {
+            
+        } break;
+            
+        default:
+            break;
+    }
+}
 
 /*
 #pragma mark - Navigation
