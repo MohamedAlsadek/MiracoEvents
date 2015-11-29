@@ -29,6 +29,6 @@
         
         [self.imageViewEvent setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@""] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite] ;
     }
-    
 }
+
 @end

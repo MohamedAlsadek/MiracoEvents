@@ -153,7 +153,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="8j7-l3-oZw">
-                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="101"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="148" height="102"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label test test test testtest  tes" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Zv-P3-Xno">
                                                     <rect key="frame" x="0.0" y="102" width="148" height="41"/>
@@ -174,7 +174,7 @@
                                             <constraint firstAttribute="trailing" secondItem="8j7-l3-oZw" secondAttribute="trailing" id="RXL-02-Uld"/>
                                             <constraint firstAttribute="trailing" secondItem="8Zv-P3-Xno" secondAttribute="trailing" id="VcJ-Lr-lQS"/>
                                             <constraint firstItem="8j7-l3-oZw" firstAttribute="top" secondItem="GSH-Ld-bGr" secondAttribute="top" id="cHd-Pd-tUo"/>
-                                            <constraint firstItem="8Zv-P3-Xno" firstAttribute="top" secondItem="8j7-l3-oZw" secondAttribute="bottom" constant="1" id="sPe-XJ-T4A"/>
+                                            <constraint firstItem="8Zv-P3-Xno" firstAttribute="top" secondItem="8j7-l3-oZw" secondAttribute="bottom" id="sPe-XJ-T4A"/>
                                             <constraint firstAttribute="bottom" secondItem="8Zv-P3-Xno" secondAttribute="bottom" id="sZk-6L-XJJ"/>
                                         </constraints>
                                         <connections>
