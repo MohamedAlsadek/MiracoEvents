@@ -10,6 +10,7 @@
 #import "ParseConnectionManager.h"
 #import "Utilities.h"
 #import "MCLocalization.h"
+#import "UIImageView+UIActivityIndicatorForSDWebImage.h"
 
 
 @interface ParentViewController : UIViewController

@@ -63,20 +63,18 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     EventsCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"EventsCollectionViewCell" forIndexPath:indexPath];
     
-    // Configure the cell
-    if ([[MCLocalization sharedInstance].language isEqualToString:@"en"]) {
-        cell.labelEventTitle.text = [[events objectAtIndex:indexPath.row] valueForKey:@"Title"] ;
-    }else {
-        cell.labelEventTitle.text = [[events objectAtIndex:indexPath.row] valueForKey:@"Title_Ar"] ;
-    }
-    PFFile *file = [[events objectAtIndex:indexPath.row] objectForKey:@"Image"];
-    NSString *imageURL = file.url ;
-//    if (imageURL) {
-//        
-//        [self.imageViewMovie setImageWithURL:[NSURL URLWithString:imageURL] placeholderImage:[UIImage imageNamed:@""] usingActivityIndicatorStyle:UIActivityIndicatorViewStyleWhite] ;
-//    }
+    [cell initCellWithObject:[events objectAtIndex:indexPath.row]] ; 
     
     return cell;
+}
+
+
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    int screenWidth = self.view.frame.size.width ;
+    int itemWidth = ( screenWidth - 20 ) / 2 ;
+    
+    return CGSizeMake(itemWidth, 140);
 }
 
 /*

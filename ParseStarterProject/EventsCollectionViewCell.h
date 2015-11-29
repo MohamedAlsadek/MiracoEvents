@@ -13,5 +13,5 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewEvent;
 @property (weak, nonatomic) IBOutlet UILabel *labelEventTitle;
 
-
+-(void) initCellWithObject:(id) object ; 
 @end
