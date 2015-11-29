@@ -1,0 +1,26 @@
+{
+    "en": {
+        "events": "Events",
+        "survey": "Survey",
+        "productCatalogue": "Product Catalogue",
+        "dealers": "Dealers",
+        "branches": "Branches",
+        "contactUs": "ContactUs",
+        "registerForProduct": "Register for product",
+        "calculate": "Calculate",
+        "connection_error" : "Error in connection" ,
+        "ok" : "Ok"
+    },
+    "ar": {
+        "events": "الفعاليات",
+        "survey": "استفتاء",
+        "productCatalogue": "سجل المنتجات",
+        "dealers": "الموزعين",
+        "branches": "الفروع",
+        "contactUs": "اتصل بنا",
+        "registerForProduct": "سجل لمنتج",
+        "calculate": "احسب",
+        "connection_error" : "خطأ في الاتصال" ,
+        "ok" : "موافق"
+    }
+}
