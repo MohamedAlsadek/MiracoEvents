@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ParentViewController.h"
 
-@interface MainViewController : UIViewController
+@interface MainViewController : ParentViewController <UICollectionViewDataSource , UICollectionViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionViewEvents;
+
 
 @end

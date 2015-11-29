@@ -8,6 +8,11 @@
  */
 
 #import <Parse/Parse.h>
+#import "MCLocalization.h"
+#import "MainViewController.h"
+#import "LeftSideMenuViewController.h"
+#import <RESideMenu/RESideMenu.h>
+#import "Utilities.h"
 
 // If you want to use any of the UI components, uncomment this line
 // #import <ParseUI/ParseUI.h>
@@ -26,6 +31,15 @@
 #pragma mark UIApplicationDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    
+    //setting the language default to english.
+    [MCLocalization loadFromJSONFile:[[NSBundle mainBundle] pathForResource:@"strings.json" ofType:nil] defaultLanguage:@"en"];
+
+    
+    //Add sidemenu
+    [self addSideMenu] ;
+    
     // Enable storing and querying data from Local Datastore. Remove this line if you don't want to
     // use Local Datastore features or want to use cachePolicy.
     [Parse enableLocalDatastore];
@@ -88,6 +102,40 @@
 
     return YES;
 }
+
+#pragma mark - SideMenu 
+-(void) addSideMenu {
+    
+    // Create content and menu controllers
+    //
+    UINavigationController *navigationController = [Utilities getControllerFromStoryboardWithId:@"MainNavigationController"];
+    
+    LeftSideMenuViewController *leftMenuViewController = [Utilities getControllerFromStoryboardWithId:@"LeftSideMenuViewController"];
+    // Create side menu controller
+    //
+    
+    RESideMenu *sideMenuViewController = [[RESideMenu alloc] initWithContentViewController:navigationController
+                                                                    leftMenuViewController:leftMenuViewController
+                                                                   rightMenuViewController:nil];
+    
+    sideMenuViewController.scaleContentView = NO ;
+    sideMenuViewController.scaleBackgroundImageView = NO;
+    sideMenuViewController.scaleMenuView = NO;
+//    sideMenuViewController.contentViewInPortraitOffsetCenterX = 2 ;
+
+    
+    // Make it a root controller
+    self.window.rootViewController = sideMenuViewController;
+    [self setStatusBarColor] ; 
+}
+
+
+-(void) setStatusBarColor {
+    UIView *view=[[UIView alloc] initWithFrame:CGRectMake(0, 0,[UIScreen mainScreen].bounds.size.width, 20)];
+    view.backgroundColor =  [UIColor colorWithRed:0 green:0 blue:0 alpha:0.6];
+    [self.window.rootViewController.view addSubview:view];
+}
+
 
 #pragma mark Push Notifications
 
